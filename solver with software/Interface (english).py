@@ -12,7 +12,7 @@ import SolveBH
 import serial
 import matplotlib.pyplot as plt
 
-#arduino = serial.Serial('COM14')
+arduino = serial.Serial('COM5')
 sleep(1)
 
 fenetre = Tk()
@@ -429,12 +429,12 @@ testMoteurs.pack(side = LEFT)
 def envoie(moves):
 
     global arduino
-    #arduino.write(outils.convertToSymbols(moves).encode())
+    arduino.write(outils.convertToSymbols(moves).encode())
 
 def envoieS(moves):
 
     global arduino
-    #arduino.write(moves.encode())
+    arduino.write(moves.encode())
 
 def TestMoteurs(moteur, action):
 
